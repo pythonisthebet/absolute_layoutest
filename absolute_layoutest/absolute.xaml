@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="absolute_layoutest.absolute"
+             Title="absolute">
+    
+    <AbsoluteLayout HeightRequest="400">
+        <Border
+    Padding="10"
+    HorizontalOptions="Fill"
+    AbsoluteLayout.LayoutFlags="All"
+    AbsoluteLayout.LayoutBounds="0,0.5,1,0.2"
+    >
+            <Entry
+                x:Name="entry"
+                Placeholder="Password"
+                HorizontalOptions="Fill"
+                VerticalOptions="Center"
+                TextChanged="entry_TextChanged"
+                
+                >
+            </Entry>
+        </Border>
+        <Label
+            x:Name="title"
+            IsVisible="false"
+            Text="Password"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.05,0.45"
+            
+        />
+        <Label
+            x:Name="vaild"
+            IsVisible="false"
+            Text="password isen't strong enough"
+            TextColor="Red"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.8,0.45"  
+                
+        />
+    </AbsoluteLayout>
+</ContentPage>
